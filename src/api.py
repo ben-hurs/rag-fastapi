@@ -3,7 +3,7 @@ from src.schemas import QueryRequest, QueryResponse
 from src.query_engine import answer_question
 from src.ingestion import run_ingestion
 
-app = FastAPI(title="junior-rag-fastapi")
+app = FastAPI(title="rag-fastapi")
 
 @app.get("/health")
 def health():
