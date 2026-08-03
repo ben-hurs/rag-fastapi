@@ -1,1 +1,39 @@
+# ==== Ambiente Python ====
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.Python
+build/
+dist/
+
+# ==== Segredos ====
 .env
+*.env.local
+
+# ==== Dados gerados / índice vetorial ====
+# Storage do Chroma é gerado pela ingestão (python -m src.ingestion),
+# não é código-fonte — cada ambiente (local, produção) gera o seu.
+storage/
+storage/chroma/
+
+# Documentos de exemplo também são gerados pelo script (scripts/generate_sample_docs.py).
+# Se você quiser versionar documentos REAIS que devem sempre existir no repo,
+# remova esta linha e adicione os arquivos manualmente.
+data/documents/
+
+# ==== Testes / cache ====
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# ==== Editor / SO ====
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
